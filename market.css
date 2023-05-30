@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.market{
+  min-height:100vh;
+  background: linear-gradient(180deg, #151515 64.02%, #B125E2 130.97%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  caret-color: none;
+  color: #FFFFFF;
+}
+
+.home__circle-top{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+.home__circle-bottom{
+  position: absolute;
+  rotate: 180deg;
+  left: 0;
+  bottom  : 0;
+}
+
+.market__content{
+  display: flex;
+  max-width: 80%;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px 50px;
+  padding:20px auto;
+}
+
+.market__content-card-1{
+  display: flex;
+  flex-direction: column;
+  padding:10px 15px;
+  align-items: center;
+  background: linear-gradient(180deg, #E62424 0%, rgba(192, 0, 0, 0) 100%);
+  border-radius: 10px;
+}
+.market__content-card-2{
+  display: flex;
+  flex-direction: column;
+  padding:10px 15px;
+  align-items: center;
+  background: linear-gradient(180deg, #CA24E6 0%, rgba(165, 0, 192, 0) 100%);
+  border-radius: 10px;
+}
+.market__content-card-3{
+  display: flex;
+  flex-direction: column;
+  padding:10px 15px;
+  align-items: center;
+  background: linear-gradient(180deg, #CA24E6 0%, rgba(165, 0, 192, 0) 100%);
+  border-radius: 10px;
+}
+
+.card__img{
+  margin-top: 6px;
+  width: 115px;
+  height: 62px;
+}
+
+.card__bid{
+  margin-top: 14px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card__price{
+  margin-top: 6px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+.card__price-title{
+ font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card__btn{
+  margin-top: 24px;
+  background: #28A909;
+  box-shadow: 0px 4px 11px rgba(45, 233, 0, 0.51), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 107px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+}
+
+.page-back{
+  position: absolute;
+  top: 6%;
+  left: 5%;
+  width: 32px;
+  height: 32px;
+  border: solid 1px #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+
+}

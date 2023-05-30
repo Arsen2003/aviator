@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./market.css">
+</head>
+<body>
+  <a class="page-back" href="./home.html">
+    <img src="./assets/icons/arrow-icon.svg" alt="">
+  </a>
+  <div class="market">
+    <img class="home__circle-top" src="./assets/images/circle-home-about.svg" alt="circle-home-about">
+    <img class="home__circle-bottom" src="./assets/images/circle-home-about.svg" alt="circle-home-about">
+    <div class="market__content">
+      <div class="market__content-card-1">
+        <img class="card__img" src="./assets/images/airplane-about-1.svg" alt="airplane-about-1">
+        <span class="card__bid">1.20x</span>
+        <div class="card__price">
+          <img src="./assets/icons/coin-icon.svg" alt="coin-icon">
+          <span class="card__price-title">3500</span>
+        </div>
+        <button class="card__btn" onclick="buyItem(1)">BUY</button>
+      </div>
+      <div class="market__content-card-2">
+        <img class="card__img" src="./assets/images/airplane-about-2.svg" alt="airplane-about-2">
+        <span class="card__bid">1.50x</span>
+        <div class="card__price">
+          <img src="./assets/icons/coin-icon.svg" alt="coin-icon">
+          <span class="card__price-title">4500</span>
+        </div>
+        <button class="card__btn" onclick="buyItem(2)">BUY</button>
+      </div>
+      <div class="market__content-card-3">
+        <img class="card__img" src="./assets/images/airplane-about-3.svg" alt="airplane-about-3">
+        <span class="card__bid">2.10x</span>
+        <div class="card__price">
+          <img src="./assets/icons/coin-icon.svg" alt="coin-icon">
+          <span class="card__price-title">4500</span>
+        </div>
+        <button class="card__btn" onclick="buyItem(3)">BUY</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function buyItem(itemNumber) {
+      let price;
+      switch (itemNumber) {
+        case 1:
+          price = 3500;
+          break;
+        case 2:
+          price = 4500;
+          break;
+        case 3:
+          price = 4500;
+          break;
+        default:
+          price = 0;
+          break;
+      }
+      let purchasedItems = localStorage.getItem('purchasedItems');
+      if (purchasedItems) {
+        purchasedItems = JSON.parse(purchasedItems);
+      } else {
+        purchasedItems = [];
+      }
+      purchasedItems.push({ itemNumber, price });
+      localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
+      alert('Товар успешно куплен и сохранен в локальном хранилище!');
+    }
+  </script>
+</body>
+</html>
